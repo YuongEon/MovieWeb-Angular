@@ -14,6 +14,11 @@ export class MoviesService {
   baseUrl : string = 'https://api.themoviedb.org/3';
   apiKey : string = '8c247ea0b4b56ed2ff7d41c9a833aa77';
 
+  getMovies(movieType: string){
+    return this.http.get<MovieDto>(`${this.baseUrl}/movie/${movieType}?api_key=${this.apiKey}`).pipe(switchMap((res) => {
+      return of(res.results)
+    }))
+  }
 
   searchMovies(page: number){
     return this.http.get<MovieDto>(`${this.baseUrl}/movie/popular?page=${page}&api_key=${this.apiKey}`).pipe(switchMap(res => {
