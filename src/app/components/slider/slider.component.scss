@@ -1,0 +1,87 @@
+@import '../../../styles/colors.scss';
+
+.slider{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35rem;
+  position: relative;
+
+  .slide{
+    position: absolute;
+    width: 100%;
+    height: 35rem;
+    display: flex;
+
+    &-bg{
+      position: relative;
+      display: flex;
+      flex: 1 1 auto;
+
+      &::after{
+        position: absolute;
+        inset: 0;
+        display: block;
+        content: "";
+        background-image: linear-gradient(to right, #000 0, transparent 75%, transparent 100%);
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-pane{
+      position: absolute;
+      top: 7.5rem;
+      left: 3.25rem;
+      .name{
+        font-size: 2.8rem;
+      }
+
+      .meta{
+        font-size: 1.4rem;
+        color: $lightGray;
+
+        .info{
+          display: flex;
+          align-items: center;
+
+          > span{
+            &:not(:last-child)::after{
+              content: '|';
+              margin-inline: 9px;
+            }
+          }
+
+          .rating{
+            display: flex;
+            align-items: center;
+
+            span{
+
+            }
+
+            .app-icons{
+              margin-right: 5px;
+              color: #d4af37;
+            }
+
+            &-value{
+              color: $white;
+              font-weight: 500;
+              margin-right: 2px;
+            }
+          }
+        }
+      }
+
+      .desc{
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+    }
+  }
+}

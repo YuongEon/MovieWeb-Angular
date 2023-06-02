@@ -1,0 +1,9 @@
+<div class="container home">
+  <section class="slider-section">
+    <app-slider [items]="popularMovies"></app-slider>
+  </section>
+  <section class="banner-item">
+    <app-banner-items [title]="'Upcoming Movies'" [items]="upcomingMovies"></app-banner-items>
+    <app-banner-items [title]="'Trending Movies'" [items]="popularMovies"></app-banner-items>
+  </section>
+</div>

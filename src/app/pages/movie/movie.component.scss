@@ -1,0 +1,41 @@
+@import '../../../styles/colors.scss';
+
+:host ::ng-deep{
+  .p-tabview-nav{
+    justify-content: center;
+
+    li.p-highlight .p-tabview-nav-link{
+      background: $bgColor;
+    }
+
+    li .p-tabview-nav-link{
+      background: $bgColor;
+    }
+  }
+}
+
+.poster{
+  max-width: 100%;
+}
+
+.overview{
+  line-height: 1.2;
+}
+
+.stat{
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child){
+    margin-bottom: 15px;
+  }
+
+  .label{
+    width: 150px;
+    font-size: 600;
+  }
+
+  .value{
+    color: $primaryColor;
+  }
+}

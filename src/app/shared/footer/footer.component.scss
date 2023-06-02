@@ -1,0 +1,10 @@
+@import '../../../styles/colors.scss';
+
+footer{
+  background-color: $bgColorLight;
+  padding: 0.6rem 0;
+  
+  p{
+    text-align: center;
+  }
+}
